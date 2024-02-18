@@ -1,0 +1,8 @@
+"process_docs": !function utils.filter_security_studies
+"description": "The following are multiple choice questions (with answers) about security\
+  \ studies.\n\n"
+"group": "bg_mmlu_social_sciences"
+"group_alias": "social_sciences"
+"include": "_default_template_yaml"
+"task": "bg_mmlu_security_studies"
+"task_alias": "security_studies"

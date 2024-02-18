@@ -1,0 +1,8 @@
+"process_docs": !function utils.filter_astronomy
+"description": "The following are multiple choice questions (with answers) about astronomy.\n\
+  \n"
+"group": "bg_mmlu_stem"
+"group_alias": "stem"
+"include": "_default_template_yaml"
+"task": "bg_mmlu_astronomy"
+"task_alias": "astronomy"

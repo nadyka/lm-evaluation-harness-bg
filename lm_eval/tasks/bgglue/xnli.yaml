@@ -1,0 +1,24 @@
+group:
+  - bgglue
+task: bgglue_xnlibg
+dataset_path: bgglue/bgglue
+dataset_name: xnlibg
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: ""
+doc_to_target: label
+# doc_to_choice: '{{[premise+" Правилно? Да! "+hypothesis,premise+" Правилно? Вероятно.
+#"+hypothesis,premise+" Правилно? Не! "+hypothesis]}}'
+# The next prompt looks to have incorrect sentences, but performs better, it seems:
+doc_to_choice: '{{[premise+", правилно? да, "+hypothesis,premise+", правилно? така,
+  "+hypothesis,premise+", правилно? не, "+hypothesis]}}'
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

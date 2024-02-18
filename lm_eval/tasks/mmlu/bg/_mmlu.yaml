@@ -1,0 +1,6 @@
+group: bg_mmlu
+task:
+  - bg_mmlu_stem
+  - bg_mmlu_other
+  - bg_mmlu_social_sciences
+  - bg_mmlu_humanities

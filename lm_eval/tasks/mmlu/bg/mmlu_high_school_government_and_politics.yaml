@@ -1,0 +1,8 @@
+"process_docs": !function utils.filter_high_school_government_and_politics
+"description": "The following are multiple choice questions (with answers) about high\
+  \ school government and politics.\n\n"
+"group": "bg_mmlu_social_sciences"
+"group_alias": "social_sciences"
+"include": "_default_template_yaml"
+"task": "bg_mmlu_high_school_government_and_politics"
+"task_alias": "high_school_government_and_politics"

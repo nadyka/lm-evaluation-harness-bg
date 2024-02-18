@@ -1,0 +1,22 @@
+group:
+  - bgglue
+task: fakenewsbg
+dataset_path: bgglue/bgglue
+dataset_name: fakenews
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+# Content is too long:
+# doc_to_text: "Заглавие: {{title}}\nТекст: {{content}}\nДостоверност:"
+doc_to_text: "Заглавие: {{title}}\nДостоверност:"
+doc_to_target: label
+doc_to_choice: '{{["истина", "лъжа"]}}'
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

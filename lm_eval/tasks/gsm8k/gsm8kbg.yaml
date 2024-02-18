@@ -1,13 +1,11 @@
 group:
   - math_word_problems
-task: gsm8k
-dataset_path: gsm8k
-dataset_name: main
+task: gsm8kbg
+dataset_path: INSAIT-Institute/GSM8k-bgeval
+dataset_name: default
 output_type: generate_until
-training_split: train
-fewshot_split: train
 test_split: test
-doc_to_text: "Question: {{question}}\nAnswer:"
+doc_to_text: "Въпрос: {{question}}\nОтговор:"
 doc_to_target: "{{answer}}" #" {{answer.split('### ')[-1].rstrip()}}"
 metric_list:
   - metric: exact_match
@@ -22,7 +20,7 @@ metric_list:
 generation_kwargs:
   until:
     - "\n\n"
-    - "Question:"
+    - "Въпрос:"
     - "</s>"
   do_sample: false
   temperature: 0.0
@@ -35,4 +33,4 @@ filter_list:
         regex_pattern: "#### (\\-?[0-9\\.\\,]+)"
       - function: "take_first"
 metadata:
-  version: 2.0
+  version: 1.0

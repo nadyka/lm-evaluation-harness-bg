@@ -1,0 +1,22 @@
+group:
+  - bgglue
+task: examsbg
+dataset_path: bgglue/bgglue
+dataset_name: examsbg
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: "Въпрос: {{question.stem}}\nОтговор:"
+doc_to_target: "{{question.choices.label.index(answerKey)}}"
+doc_to_choice: "{{question.choices.text}}"
+num_fewshot: 5
+fewshot_split: train
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

@@ -1,10 +1,8 @@
-task: triviaqa
-dataset_path: trivia_qa
-dataset_name: rc.nocontext
+task: triviaqabg
+dataset_path: INSAIT-Institute/triviaqa-bgeval
 output_type: generate_until
-training_split: train
 validation_split: validation
-doc_to_text: "Question: {{question}}?\nAnswer:"
+doc_to_text: "Въпрос: {{question}}?\nОтговор:"
 doc_to_target: "{{answer.aliases}}"
 should_decontaminate: true
 doc_to_decontamination_query: question
@@ -16,6 +14,7 @@ generation_kwargs:
     - "</s>"
   do_sample: false
   temperature: 0.0
+num_fewshot: 5
 filter_list:
   - name: remove_whitespace
     filter:
@@ -28,6 +27,5 @@ metric_list:
     higher_is_better: true
     ignore_case: true
     ignore_punctuation: true
-num_fewshot: 5
 metadata:
-  version: 3.0
+  version: 2.0

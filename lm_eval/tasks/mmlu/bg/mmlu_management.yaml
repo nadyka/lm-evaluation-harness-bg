@@ -1,0 +1,8 @@
+"process_docs": !function utils.filter_management
+"description": "The following are multiple choice questions (with answers) about management.\n\
+  \n"
+"group": "bg_mmlu_other"
+"group_alias": "other"
+"include": "_default_template_yaml"
+"task": "bg_mmlu_management"
+"task_alias": "management"

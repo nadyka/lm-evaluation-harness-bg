@@ -1,0 +1,3 @@
+include: arc_easy_bg.yaml
+task: arc_challenge_bg
+dataset_path: INSAIT-Institute/arc-challenge-bgeval

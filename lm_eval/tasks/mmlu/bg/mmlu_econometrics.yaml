@@ -1,0 +1,8 @@
+"process_docs": !function utils.filter_econometrics
+"description": "The following are multiple choice questions (with answers) about econometrics.\n\
+  \n"
+"group": "bg_mmlu_social_sciences"
+"group_alias": "social_sciences"
+"include": "_default_template_yaml"
+"task": "bg_mmlu_econometrics"
+"task_alias": "econometrics"
